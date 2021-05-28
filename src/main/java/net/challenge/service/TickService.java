@@ -35,26 +35,6 @@ public class TickService extends Base {
         }
 
     }
-//    public String createInstrument(Tick tick) {
-//        if (validateInstrument(tick.getTimestamp())) {
-//            try {
-//                File file = new ClassPathResource("price.txt").getFile();
-//
-//                if (!file.exists()) {
-//                    file.createNewFile();
-//                }
-//                FileWriter fw = new FileWriter(file.getAbsoluteFile(), true);
-//                BufferedWriter bw = new BufferedWriter(fw);
-//                bw.write(tick.getInstrument() + "-" + tick.getPrice() + "-" + tick.getTimestamp() + "/");
-//                bw.close();
-//                return Base.Sucess;
-//            } catch (Exception e) {
-//                return Base.Fail + e.getMessage();
-//            }
-//        } else {
-//            return Base.Fail;
-//        }
-//    }
 
     public Tick findInstrumentById(String instrument) {
         Hashtable<String, Tick> tickHashtable =readFile();
